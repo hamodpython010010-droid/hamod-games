@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://hamod3dmainscene"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_player"]
+
+[node name="main" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_player")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 2, 4)
